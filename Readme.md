@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Клара Асланова](https://up.htmlacademy.ru/adaptive/20/user/111171).
-* Наставник: `Неизвестно`.
+* Наставник: [Семён Якушев](https://up.htmlacademy.ru/adaptive/20/user/1118791).
 
 ---
 
