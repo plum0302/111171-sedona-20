@@ -1,0 +1,12 @@
+.hints {
+  @include list-styles-reset;
+}
+
+.hints__title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.hints__description {
+  color: $dark;
+}

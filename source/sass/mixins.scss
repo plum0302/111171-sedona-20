@@ -1,0 +1,9 @@
+@mixin list-styles-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin link-styles-reset {
+  text-decoration: none;
+}

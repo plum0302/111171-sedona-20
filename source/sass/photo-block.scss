@@ -1,0 +1,23 @@
+.photo-block {
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+
+.photo-block__img {
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.photo-block__caption {
+  line-height: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.photo-block__likes {
+  margin-top: 10px;
+}
