@@ -1,0 +1,34 @@
+.field {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field__name {
+  color: $dark;
+  line-height: 26px;
+  margin-right: 10px;
+}
+
+.field__input {
+  border: none;
+  background-color: $form-grey;
+  height: 58px;
+  flex-grow: 1;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding-left: 22px;
+    color: $black;
+  }
+}
+
+.field--contacts {
+  flex-direction: column;
+
+  .field__name {
+    padding-left: 22px;
+    margin-bottom: 10px;
+  }
+}
