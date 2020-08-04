@@ -1,0 +1,11 @@
+.fieldset {
+  border-bottom: 1px solid $gallery-grey;
+
+  legend {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
