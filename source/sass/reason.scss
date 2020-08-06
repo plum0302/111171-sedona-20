@@ -1,19 +1,36 @@
 .reason {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.reason__text {
   padding-top: 34px;
   padding-bottom: 24px;
   text-align: center;
   background-color: $grey;
+
+  @media (min-width: $tablet-width) {
+    width: 256px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+  }
 }
 
-.reason--colored {
+.reason__text--colored {
   background-color: $blue;
   color: $white;
-  padding-bottom: 0;
 }
 
 .reason__title {
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .reason__description {
@@ -23,4 +40,12 @@
 .reason__img {
   font-size: 0;
   line-height: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
 }
