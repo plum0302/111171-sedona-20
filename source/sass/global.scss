@@ -15,3 +15,16 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-width;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
+    }
+  }

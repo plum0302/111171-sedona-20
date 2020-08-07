@@ -1,17 +1,13 @@
 .gallery {
   border-top: 1px solid $gallery-grey;
-  width: 320px;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: none;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
