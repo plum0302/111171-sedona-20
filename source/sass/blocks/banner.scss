@@ -11,4 +11,14 @@
 .banner__text--index {
   padding-top: 90px;
   padding-bottom: 85px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 91px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 90px;
+  }
 }
