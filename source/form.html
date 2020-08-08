@@ -47,25 +47,25 @@
       <p class="page-main__caption">
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях
       </p>
-      <section class="feedback">
-        <form class="feedback__form form">
-          <fieldset class="form__set fieldset">
-            <legend>Представьтесь:</legend>
-            <p class="fieldset__item field">
-              <label class="field__name">Имя*:</label>
-              <input class="field__input" type="text" placeholder="Петр" required>
-            </p>
-            <p class="fieldset__item field">
-              <label class="field__name">Фамилия*:</label>
-              <input class="field__input" type="text" placeholder="Иванов" required>
-            </p>
-            <p class="fieldset__item field">
-              <label class="field__name">Отчество:</label>
-              <input class="field__input" type="text" placeholder="Александрович">
-            </p>
-          </fieldset>
-          <fieldset class="form__set fieldset">
-            <legend>Контактная информация:</legend>
+      <form class="container form">
+        <fieldset class="form__set fieldset">
+          <legend>Представьтесь:</legend>
+          <p class="fieldset__item field">
+            <label class="field__name">Имя*:</label>
+            <input class="field__input" type="text" placeholder="Петр" required>
+          </p>
+          <p class="fieldset__item field">
+            <label class="field__name">Фамилия*:</label>
+            <input class="field__input" type="text" placeholder="Иванов" required>
+          </p>
+          <p class="fieldset__item field">
+            <label class="field__name">Отчество:</label>
+            <input class="field__input" type="text" placeholder="Александрович">
+          </p>
+        </fieldset>
+        <fieldset class="form__set fieldset fieldset--contacts">
+          <legend>Контактная информация:</legend>
+          <div class="fieldset__wrapper">
             <p class="fieldset__item field field--contacts">
               <label class="field__name">Конактный телефон*:</label>
               <input class="field__input field__input--phone" type="text" placeholder="Введите телефон" required>
@@ -74,21 +74,23 @@
               <label class="field__name">Электронная почта*:</label>
               <input class="field__input field__input--mail" type="text" placeholder="Введите e-mail" required>
             </p>
-          </fieldset>
-          <fieldset class="form__set fieldset">
-            <legend>Ваше общее впечатление:</legend>
-            <p class="fieldset__item radio">
-              <label><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
-            </p>
-            <p class="fieldset__item radio">
-              <label><input type="radio" name="impression" value="negative">Скорее отрицательное</label>
-            </p>
-            <p class="fieldset__item radio">
-              <label><input type="radio" name="impression" value="uncertian">Затрудняюсь ответить</label>
-            </p>
-          </fieldset>
-          <fieldset class="form__set fieldset">
-            <legend>Посещенные достопримечательности:</legend>
+          </div>
+        </fieldset>
+        <fieldset class="form__set fieldset fieldset--impression">
+          <legend>Ваше общее впечатление:</legend>
+          <p class="fieldset__item radio">
+            <label><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
+          </p>
+          <p class="fieldset__item radio">
+            <label><input type="radio" name="impression" value="negative">Скорее отрицательное</label>
+          </p>
+          <p class="fieldset__item radio">
+            <label><input type="radio" name="impression" value="uncertian">Затрудняюсь ответить</label>
+          </p>
+        </fieldset>
+        <fieldset class="form__set fieldset fieldset--attractions">
+          <legend>Посещенные достопримечательности:</legend>
+          <div class="fieldset__wrapper">
             <p class="fieldset__item checkbox">
               <label><input type="checkbox" name="attraction" value="devils-bridge" checked>Мост Дьявола</label>
             </p>
@@ -101,16 +103,17 @@
             <p class="fieldset__item checkbox">
               <label><input type="checkbox" name="attraction" value="red-rocks">Красные скалы</label>
             </p>
-          </fieldset>
-          <fieldset class="form__set fieldset">
-            <legend>Опишите свои эмоции:</legend>
-            <textarea class="fieldset__item textarea">
-              Опишите подробно все свои восторги
-            </textarea>
-          </fieldset>
-          <button class="form__button button" type="submit">Отправить отзыв</button>
-        </form>
-      </section>
+          </div>
+        </fieldset>
+        <fieldset class="form__set fieldset fieldset--text">
+          <legend>Опишите свои эмоции:</legend>
+          <textarea class="fieldset__item textarea">
+            Опишите подробно все свои восторги
+          </textarea>
+        </fieldset>
+        <button class="form__button button" type="submit">Отправить отзыв</button>
+        <span class="form__caption">*-обязательные поля</span>
+      </form>
     </main>
     <footer class="page-footer">
       <div class="page-footer__hashtag">
