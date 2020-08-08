@@ -9,3 +9,37 @@
     text-align: center;
   }
 }
+
+.fieldset--impression {
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+}
+
+.fieldset--contacts,
+.fieldset--attractions,
+.fieldset--text {
+  grid-column: 1/-1;
+}
+
+.fieldset__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.fieldset--attractions > .fieldset__wrapper {
+  @media (min-width: $tablet-width) {
+    width: 473px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}

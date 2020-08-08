@@ -4,6 +4,12 @@
   }
 }
 
+.reason--change {
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+  }
+}
+
 .reason__text {
   padding-top: 34px;
   padding-bottom: 24px;

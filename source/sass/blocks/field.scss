@@ -26,9 +26,20 @@
 
 .field--contacts {
   flex-direction: column;
+  flex-basis: 280px;
 
   .field__name {
     padding-left: 22px;
     margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 684px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 401px;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
