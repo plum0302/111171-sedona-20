@@ -1,6 +1,31 @@
 .author {
   display: flex;
-  text-transform: none;
+  flex-direction: column;
   line-height: 24px;
   color: $dark;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.author__title {
+  font-weight: bold;
+  flex-grow: 1;
+  width: 100%;
+  line-height: 24px;
+}
+
+.author__wrapper {
+  display: flex;
+  margin: 0;
+}
+
+.author__text {
+  margin-right: 4px;
+}
+
+.author__text,
+.author__name {
+  text-transform: none;
 }

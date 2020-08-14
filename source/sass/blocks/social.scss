@@ -4,3 +4,20 @@
 
   @include list-styles-reset;
 }
+
+.social__item {
+  width: 46px;
+  background-color: $blue;
+  margin-right: 6px;
+}
+
+.social__link {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 7px;
+  text-align: center;
+
+  svg {
+    fill: $white;
+  }
+}

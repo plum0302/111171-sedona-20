@@ -1,21 +1,35 @@
 .hint {
   @include list-styles-reset;
+  padding: 26px 18px;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    padding: 0;
   }
 }
 
 .hint__item {
+  padding-left: 52px;
+  padding-top: 9px;;
+  margin-bottom: 13px;
+
   @media (min-width: $tablet-width) {
     text-align: center;
     width: 33%;
+    padding-top: 159px;
+    padding-left: 0;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
   }
 }
 
 .hint__title {
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
@@ -24,4 +38,82 @@
 
 .hint__description {
   color: $dark;
+  margin-top: 17px;
+  padding-right: 28px;
+}
+
+.hint__item--house {
+  background-image: url('/img/icon-house.svg');
+  background-repeat: no-repeat;
+  background-position: 3px 0;
+  background-size: 39px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 72px;
+    background-position: center 61px;
+
+    .hint__description {
+      padding: 0 30px;
+      margin-top: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .hint__description {
+      padding: 0 50px;
+      margin-top: 23px;
+    }
+  }
+}
+
+.hint__item--souvenirs {
+  background-image: url('/img/icon-gift.svg');
+  background-repeat: no-repeat;
+  background-position: 6px 0;
+  background-size: 33px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    padding-top: 169px;
+    background-size: 62px;
+    background-position: center 58px;
+
+    .hint__description {
+      padding: 0 30px;
+      margin-top: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 156px;
+
+    .hint__description {
+      padding: 0 100px;
+      margin-top: 23px;
+    }
+  }
+}
+
+.hint__item--meal {
+  background-image: url('/img/icon-burger.svg');
+  background-repeat: no-repeat;
+  background-position: 2px 5px;
+  background-size: 39px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 76px;
+    background-position: center 61px;
+
+    .hint__description {
+      padding: 0 50px;
+      margin-top: 23px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .hint__description {
+      padding: 0 50px;
+      margin-top: 23px;
+    }
+  }
 }
