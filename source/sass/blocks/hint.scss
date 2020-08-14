@@ -10,7 +10,7 @@
 
 .hint__item {
   padding-left: 52px;
-  padding-top: 9px;;
+  padding-top: 9px;
   margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
@@ -43,7 +43,7 @@
 }
 
 .hint__item--house {
-  background-image: url('/img/icon-house.svg');
+  background-image: url("/img/icon-house.svg");
   background-repeat: no-repeat;
   background-position: 3px 0;
   background-size: 39px;
@@ -67,7 +67,7 @@
 }
 
 .hint__item--souvenirs {
-  background-image: url('/img/icon-gift.svg');
+  background-image: url("/img/icon-gift.svg");
   background-repeat: no-repeat;
   background-position: 6px 0;
   background-size: 33px;
@@ -95,7 +95,7 @@
 }
 
 .hint__item--meal {
-  background-image: url('/img/icon-burger.svg');
+  background-image: url("/img/icon-burger.svg");
   background-repeat: no-repeat;
   background-position: 2px 5px;
   background-size: 39px;

@@ -13,12 +13,12 @@
 }
 
 .reasons::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -1px;
   width: 320px;
   height: 37px;
-  background-image: url('/img/bg-triangle.svg');
+  background-image: url("/img/bg-triangle.svg");
   background-position: cover;
   background-repeat: no-repeat;
 
