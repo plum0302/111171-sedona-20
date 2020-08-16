@@ -36,12 +36,14 @@
     background-color: $white;
     box-shadow: none;
     padding-top: 17px;
+    flex: 1;
   }
 }
 
 .site-list__item--logo {
   background-color: $white;
   height: 56px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     order: -1;
