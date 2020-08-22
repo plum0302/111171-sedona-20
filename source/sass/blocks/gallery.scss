@@ -1,10 +1,12 @@
 .gallery {
   border-top: 1px solid $gallery-grey;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: none;
+    padding: 0 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -14,6 +16,10 @@
 
 .gallery__item {
   border-bottom: 1px solid $gallery-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .gallery__item:first-child {

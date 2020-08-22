@@ -1,3 +1,65 @@
 .main-nav {
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  min-height: 55px;
+  width: auto;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  width: 22px;
+  height: 4px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  background-color: $blue;
+  box-shadow: 0 5px 0 0 $blue, 0 10px 0 0 $blue;
+
+  &:hover {
+    background-color: fade-out($blue, 0.3);
+  }
+
+  &:active {
+    background-color: fade-out($blue, 0.6);
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 25px;
+  background-color: $white;
+  transform: rotate(45deg);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 4px;
+    background-color: $white;
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:hover::after {
+    background-color: fade-out($white, 0.3);
+  }
+
+  &:active,
+  &:active::after {
+    background-color: fade-out($white, 0.6);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
 }

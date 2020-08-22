@@ -1,5 +1,31 @@
 .likes {
   display: flex;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.likes__button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-right: 15px;
+
+  svg {
+    opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    svg path {
+      fill: $white;
+    }
+  }
 }
 
 .likes__number {

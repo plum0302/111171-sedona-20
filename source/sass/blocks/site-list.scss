@@ -17,6 +17,8 @@
   background-color: $blue;
   height: 55px;
   text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
 
   a {
     color: $white;
@@ -33,12 +35,15 @@
     height: 56px;
     background-color: $white;
     box-shadow: none;
+    padding-top: 17px;
+    flex: 1;
   }
 }
 
 .site-list__item--logo {
   background-color: $white;
   height: 56px;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     order: -1;

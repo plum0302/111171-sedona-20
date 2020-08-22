@@ -1,6 +1,28 @@
 .reasons {
+  position: relative;
+  padding-top: 20px;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 8px;
+  }
+}
+
+.reasons::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  width: 320px;
+  height: 37px;
+  background-image: url("/img/bg-triangle.svg");
+  background-position: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
