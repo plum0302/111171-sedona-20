@@ -1,5 +1,6 @@
 .gallery {
   border-top: 1px solid $gallery-grey;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     display: grid;
