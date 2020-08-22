@@ -17,8 +17,13 @@
     opacity: 0.3;
 
     @media (min-width: $desktop-width) {
-      fill: $white;
       opacity: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    svg path {
+      fill: $white;
     }
   }
 }
