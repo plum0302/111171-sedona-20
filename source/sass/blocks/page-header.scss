@@ -2,27 +2,27 @@
   position: relative;
 }
 
- .page-header::after {
-   content: "";
-   position: absolute;
-   width: 100vw;
-   height: 77px;
-   bottom: -1px;
-   background-image: url("/img/bg-intro-triangle-mobile.svg");
-   background-position: center bottom;
-   background-repeat: no-repeat;
-   background-size: contain;
+.page-header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 77px;
+  bottom: -1px;
+  background-image: url("/img/bg-intro-triangle-mobile.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-   @media (min-width: $tablet-width) {
-     background-image: url("/img/bg-intro-triangle-tablet.svg");
-     bottom: -1px;
-   }
+  @media (min-width: $tablet-width) {
+    background-image: url("/img/bg-intro-triangle-tablet.svg");
+    bottom: -1px;
+  }
 
-   @media (min-width: $desktop-width) {
-     background-image: url("/img/bg-intro-triangle-desktop.svg");
-   }
- }
+  @media (min-width: $desktop-width) {
+   background-image: url("/img/bg-intro-triangle-desktop.svg");
+  }
+}
 
- .page-header--index::after {
-   bottom: -1px;
- }
+.page-header--index::after {
+  bottom: -1px;
+}
