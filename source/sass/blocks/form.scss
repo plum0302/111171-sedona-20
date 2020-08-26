@@ -1,5 +1,6 @@
 .form {
   box-sizing: border-box;
+  border-top: 1px solid $gallery-grey;
 
   @media (min-width: $tablet-width) {
     display: grid;

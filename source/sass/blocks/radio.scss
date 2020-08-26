@@ -1,12 +1,30 @@
-.radio {
-  label {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    text-transform: none;
-  }
+.radio label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 13px;
+  padding-left: 74px;
+  min-height: 48px;
+  box-sizing: border-box;
 
-  input {
-    margin-right: 29px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 0;
+    top: 0;
+    border: 15px solid $form-grey;
+    box-sizing: border-box;
+    border-radius: 50%;
   }
+}
+
+.radio input:checked + label::before {
+  background-color: $dark;
 }

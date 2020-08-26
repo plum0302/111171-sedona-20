@@ -25,7 +25,6 @@
 .fieldset__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;

@@ -8,7 +8,7 @@
   </head>
   <body class="page">
     <header class="page-header">
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -79,29 +79,36 @@
         <fieldset class="form__set fieldset fieldset--impression">
           <legend>Ваше общее впечатление:</legend>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
+            <input class="visually-hidden" type="radio" name="impression" value="positive" id="impression-positive" checked>
+            <label for="impression-positive">Скорее положительное</label>
           </p>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="negative">Скорее отрицательное</label>
+            <input class="visually-hidden" type="radio" name="impression" value="negative" id="impression-negative">
+            <label for="impression-negative">Скорее отрицательное</label>
           </p>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="uncertian">Затрудняюсь ответить</label>
+            <input class="visually-hidden" type="radio" name="impression" value="uncertian" id="impression-uncertain">
+            <label for="impression-uncertain">Затрудняюсь ответить</label>
           </p>
         </fieldset>
         <fieldset class="form__set fieldset fieldset--attractions">
           <legend>Посещенные достопримечательности:</legend>
           <div class="fieldset__wrapper">
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="devils-bridge" checked>Мост Дьявола</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="devils-bridge" id="attraction-bridge" checked>
+              <label for="attraction-bridge">Мост Дьявола</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="bell-rock">Гора-Колокол</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="bell-rock" id="attraction-bell">
+              <label for="attraction-rock">Гора-Колокол</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="slide-park">Слайд-парк</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="slide-park" id="attraction-park">
+              <label for="attraction-park">Слайд-парк</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="red-rocks">Красные скалы</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="red-rocks" id="attraction-rocks">
+              <label for="attraction-rocks">Красные скалы</label>
             </p>
           </div>
         </fieldset>
