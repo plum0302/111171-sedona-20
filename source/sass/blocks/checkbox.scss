@@ -19,14 +19,14 @@
 
 .checkbox label::before {
   content: "";
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 0;
-    top: 0;
-    background-color: $form-grey;
-    box-sizing: border-box;
-    border-radius: 3px;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 0;
+  top: 0;
+  background-color: $form-grey;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
 
 .checkbox input:checked + label::before {
