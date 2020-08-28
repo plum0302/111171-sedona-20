@@ -1,6 +1,7 @@
 .field {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .field__name {
@@ -27,6 +28,7 @@
 .field--contacts {
   flex-direction: column;
   flex-basis: 280px;
+  align-items: stretch;
 
   .field__name {
     padding-left: 22px;
