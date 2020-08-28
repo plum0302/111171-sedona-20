@@ -48,7 +48,7 @@
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях
       </p>
       <form class="container form">
-        <fieldset class="form__set fieldset">
+        <fieldset class="form__set fieldset fieldset--introduction">
           <legend>Представьтесь:</legend>
           <p class="fieldset__item field">
             <label class="field__name">Имя*:</label>
@@ -67,10 +67,12 @@
           <legend>Контактная информация:</legend>
           <div class="fieldset__wrapper">
             <p class="fieldset__item field field--contacts">
-              <label class="field__name">Конактный телефон*:</label>
+              <label class="field__name">
+                <span class="field__name--hide">Конактный</span> телефон*:
+              </label>
               <input class="field__input field__input--phone" type="text" placeholder="Введите телефон" required>
             </p>
-            <p class="fieldset__item field field--contacts">
+            <p class="fieldset__item field field--contacts field--mail">
               <label class="field__name">Электронная почта*:</label>
               <input class="field__input field__input--mail" type="text" placeholder="Введите e-mail" required>
             </p>

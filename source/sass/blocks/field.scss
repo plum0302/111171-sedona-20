@@ -10,6 +10,12 @@
   margin-right: 10px;
 }
 
+.field__name--hide {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .field__input {
   border: none;
   background-color: $form-grey;
@@ -43,5 +49,40 @@
     flex-basis: 401px;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 0;
+  }
+}
+
+.field__input--phone {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    z-index: 100;
+    background: $contacts-grey url("/img/icon-phone.svg") center no-repeat;
+  }
+}
+
+.field__input--mail {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    z-index: 100;
+    background: $contacts-grey url("/img/icon-mail.svg") center no-repeat;
+  }
+}
+
+.field--mail {
+  @media (min-width: $desktop-width) {
+    flex-basis: 481px;
   }
 }
