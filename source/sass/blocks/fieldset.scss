@@ -9,7 +9,7 @@
   }
 }
 
-.fieldset legend {
+.fieldset__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
@@ -19,6 +19,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
+    width: 309px;
   }
 }
 
@@ -84,9 +85,9 @@
   }
 }
 
-.fieldset--attractions legend {
+.fieldset__title--attractions {
   @media (min-width: $tablet-width) {
-    padding-bottom: 47px;
+    margin-bottom: 47px;
   }
 }
 
@@ -94,23 +95,63 @@
   border-bottom: none;
 }
 
-.fieldset--text legend {
+.fieldset__title--text {
   @media (min-width: $tablet-width) {
-    padding-bottom: 54px;
+    margin-bottom: 54px;
   }
 }
 
-.fieldset--contacts legend {
+.fieldset__title--contacts {
   @media (min-width: $desktop-width) {
-    padding-bottom: 71px;
+    margin-bottom: 71px;
   }
 }
 
-.fieldset--introduction legend,
-.fieldset--impression legend {
+.fieldset__title--contacts,
+.fieldset__title--attractions,
+.fieldset__title--text {
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: $title-grey;
+      top: 50%;
+      left: -164px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background-color: $title-grey;
+      top: 50%;
+      right: -164px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 280px;
+      left: -322px;
+    }
+
+    &::after {
+      width: 280px;
+      right: -322px;
+    }
+  }
+}
+
+.fieldset__title--introduction,
+.fieldset__title--impression {
   @media (min-width: $tablet-width) {
     text-align: start;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 }
 

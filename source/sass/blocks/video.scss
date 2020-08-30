@@ -11,26 +11,28 @@
 
 .video__controls {
   width: 280px;
+  height: 66px;
   background-color: $form-grey;
   margin: 0 auto;
-  padding: 23px 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  padding-bottom: 15px;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 648px;
+    height: 93px;
     background-color: rgba($black, 0.4);
-    padding: 35px 41px 37px 35px;
     position: absolute;
+    padding-bottom: 0;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     width: 800px;
   }
 }
@@ -38,7 +40,7 @@
 .video__progressbar {
   flex-grow: 1;
   width: 100%;
-  margin-top: -90px;
+  margin-top: -59px;
 
   @media (min-width: $tablet-width) {
     width: 389px;
@@ -70,18 +72,21 @@
 }
 
 .video__restart {
-  margin-right: 133px;
+  margin-left: 25px;
 
   @media (min-width: $tablet-width) {
     order: -1;
-    margin-right: 42px;
+    margin-left: 35px;
   }
 }
 
-.video__subtitles {
-  margin-right: 31px;
+.video__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 83px;
+  margin-right: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 42px;
+    margin-right: 41px;
   }
 }

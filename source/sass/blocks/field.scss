@@ -21,6 +21,7 @@
   background-color: $form-grey;
   height: 58px;
   flex-grow: 1;
+  padding: 0;
 
   &::placeholder {
     font-size: 18px;
@@ -35,6 +36,7 @@
   flex-direction: column;
   flex-basis: 280px;
   align-items: stretch;
+  position: relative;
 
   .field__name {
     padding-left: 22px;
@@ -50,34 +52,21 @@
     flex-direction: row;
     justify-content: space-between;
     padding-left: 0;
+    align-items: baseline;
   }
 }
 
-.field__input--phone {
-  position: relative;
+.field__icon {
+  position: absolute;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  right: 0;
+  bottom: 0;
+  background-color: $contacts-grey;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 58px;
-    height: 58px;
-    right: 0;
-    z-index: 100;
-    background: $contacts-grey url("/img/icon-phone.svg") center no-repeat;
-  }
-}
-
-.field__input--mail {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 58px;
-    height: 58px;
-    right: 0;
-    z-index: 100;
-    background: $contacts-grey url("/img/icon-mail.svg") center no-repeat;
+  svg {
+    margin: auto;
   }
 }
 
