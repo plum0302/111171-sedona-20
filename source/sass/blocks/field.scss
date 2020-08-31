@@ -1,6 +1,7 @@
 .field {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .field__name {
@@ -9,11 +10,18 @@
   margin-right: 10px;
 }
 
+.field__name--hide {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .field__input {
   border: none;
   background-color: $form-grey;
   height: 58px;
   flex-grow: 1;
+  padding: 0;
 
   &::placeholder {
     font-size: 18px;
@@ -27,6 +35,8 @@
 .field--contacts {
   flex-direction: column;
   flex-basis: 280px;
+  align-items: stretch;
+  position: relative;
 
   .field__name {
     padding-left: 22px;
@@ -41,5 +51,27 @@
     flex-basis: 401px;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 0;
+    align-items: baseline;
+  }
+}
+
+.field__icon {
+  position: absolute;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  right: 0;
+  bottom: 0;
+  background-color: $contacts-grey;
+
+  svg {
+    margin: auto;
+  }
+}
+
+.field--mail {
+  @media (min-width: $desktop-width) {
+    flex-basis: 481px;
   }
 }

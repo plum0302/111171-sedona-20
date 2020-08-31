@@ -1,23 +1,47 @@
 .visit {
-  padding-top: 33px;
+  padding-top: 47px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+  }
 }
 
 .visit__title {
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
+    margin-bottom: 40px;
   }
 }
 
 .visit__text {
   color: $dark;
   line-height: 24px;
-  margin-bottom: 27px;
+  max-width: 261px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 435px;
+  }
+}
+
+.visit__button {
+  margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 37px;
+  }
 }
 
 .visit__map {
   margin-top: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 58px;
+  }
 }

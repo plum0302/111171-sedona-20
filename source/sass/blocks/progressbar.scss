@@ -1,0 +1,29 @@
+.progressbar {
+  background-color: rgba($black, 0.4);
+  padding: 22px 23px 20px 22px;
+  position: relative;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.progressbar__bar {
+  height: 3px;
+  background-color: rgba($white, 0.3);
+}
+
+.progressbar__toggle {
+  width: 13px;
+  height: 13px;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  top: 17px;
+  left: 66px;
+
+  @media (min-width: $tablet-width) {
+    top: -5px;
+  }
+}

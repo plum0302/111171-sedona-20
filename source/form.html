@@ -8,7 +8,7 @@
   </head>
   <body class="page">
     <header class="page-header">
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -48,8 +48,8 @@
         Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях
       </p>
       <form class="container form">
-        <fieldset class="form__set fieldset">
-          <legend>Представьтесь:</legend>
+        <fieldset class="form__set fieldset fieldset--introduction">
+          <legend class="fieldset__title fieldset__title--introduction">Представьтесь:</legend>
           <p class="fieldset__item field">
             <label class="field__name">Имя*:</label>
             <input class="field__input" type="text" placeholder="Петр" required>
@@ -64,49 +64,73 @@
           </p>
         </fieldset>
         <fieldset class="form__set fieldset fieldset--contacts">
-          <legend>Контактная информация:</legend>
+          <legend class="fieldset__title fieldset__title--contacts">Контактная информация:</legend>
           <div class="fieldset__wrapper">
             <p class="fieldset__item field field--contacts">
-              <label class="field__name">Конактный телефон*:</label>
+              <label class="field__name">
+                <span class="field__name--hide">Конактный</span> телефон*:
+              </label>
               <input class="field__input field__input--phone" type="text" placeholder="Введите телефон" required>
+              <span class="field__icon"><svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
+                <g id="Page-1">
+                  <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                    <g id="phone" transform="translate(85.000000, 126.000000)">
+                      <path id="Shape" fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </span>
             </p>
-            <p class="fieldset__item field field--contacts">
+            <p class="fieldset__item field field--contacts field--mail">
               <label class="field__name">Электронная почта*:</label>
               <input class="field__input field__input--mail" type="text" placeholder="Введите e-mail" required>
+              <span class="field__icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                  <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
+                </svg>
+              </span>
             </p>
           </div>
         </fieldset>
         <fieldset class="form__set fieldset fieldset--impression">
-          <legend>Ваше общее впечатление:</legend>
+          <legend class="fieldset__title fieldset__title--impression">Ваше общее впечатление:</legend>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
+            <input class="visually-hidden" type="radio" name="impression" value="positive" id="impression-positive" checked>
+            <label for="impression-positive">Скорее положительное</label>
           </p>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="negative">Скорее отрицательное</label>
+            <input class="visually-hidden" type="radio" name="impression" value="negative" id="impression-negative">
+            <label for="impression-negative">Скорее отрицательное</label>
           </p>
           <p class="fieldset__item radio">
-            <label><input type="radio" name="impression" value="uncertian">Затрудняюсь ответить</label>
+            <input class="visually-hidden" type="radio" name="impression" value="uncertian" id="impression-uncertain">
+            <label for="impression-uncertain">Затрудняюсь ответить</label>
           </p>
         </fieldset>
         <fieldset class="form__set fieldset fieldset--attractions">
-          <legend>Посещенные достопримечательности:</legend>
+          <legend class="fieldset__title fieldset__title--attractions">Посещенные достопримечательности:</legend>
           <div class="fieldset__wrapper">
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="devils-bridge" checked>Мост Дьявола</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="devils-bridge" id="attraction-bridge" checked>
+              <label for="attraction-bridge">Мост Дьявола</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="bell-rock">Гора-Колокол</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="bell-rock" id="attraction-bell">
+              <label for="attraction-bell">Гора-Колокол</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="slide-park">Слайд-парк</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="slide-park" id="attraction-park">
+              <label for="attraction-park">Слайд-парк</label>
             </p>
             <p class="fieldset__item checkbox">
-              <label><input type="checkbox" name="attraction" value="red-rocks">Красные скалы</label>
+              <input class="visually-hidden" type="checkbox" name="attraction" value="red-rocks" id="attraction-rocks">
+              <label for="attraction-rocks">Красные скалы</label>
             </p>
           </div>
         </fieldset>
         <fieldset class="form__set fieldset fieldset--text">
-          <legend>Опишите свои эмоции:</legend>
+          <legend class="fieldset__title fieldset__title--text">Опишите свои эмоции:</legend>
           <textarea class="fieldset__item textarea">
             Опишите подробно все свои восторги
           </textarea>
