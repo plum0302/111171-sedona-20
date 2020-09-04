@@ -51,6 +51,16 @@
   }
 }
 
+.site-list__item--logo img {
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 96px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .site-list__item:nth-child(1) {
     order: -3;

@@ -43,6 +43,21 @@
   padding-bottom: 67px;
 }
 
+.banner__text img {
+  width: 229px;
+  height: 39px;
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+    height: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 459px;
+    height: 79px;
+  }
+}
+
 .banner__text--index {
   padding-top: 90px;
   padding-bottom: 85px;
@@ -55,5 +70,15 @@
   @media (min-width: $desktop-width) {
     padding-top: 78px;
     padding-bottom: 90px;
+  }
+}
+
+.banner__text--index img {
+  width: 282px;
+  height: 214px;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    height: 350px;
   }
 }
