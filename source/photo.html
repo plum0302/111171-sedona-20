@@ -28,7 +28,11 @@
             </li>
             <li class="site-list__item site-list__item--logo">
               <a>
-                <img src="img/logotype-mobile.svg" width="102" height="84" alt="sedona logo">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                  <img src="img/logo-sedona-mobile.svg" alt="sedona logo">
+                </picture>
               </a>
             </li>
           </ul>
@@ -36,7 +40,7 @@
       </nav>
       <div class="page-header__banner banner">
         <div class="banner__text">
-          <img src="/img/text-sedona.svg" width="229" height="39" alt="Sedona">
+          <img src="/img/text-sedona.svg" alt="Sedona">
         </div>
       </div>
     </header>
@@ -49,7 +53,11 @@
       <section class="container gallery">
         <figure class="gallery__item photo-block">
           <p class="photo-block__img">
-            <img src="/img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="дорога в Седону">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="/img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="/img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img src="/img/photo-sunset-mobile@1x.jpg" srcset="/img/photo-sunset-mobile@2x.jpg 2x" alt="дорога в Седону">
+            </picture>
           </p>
           <figcaption class="photo-block__caption">
             <div class="photo-block__author author">
@@ -78,8 +86,12 @@
         </figure>
         <figure class="gallery__item photo-block">
           <p class="photo-block__img">
-            <img src="/img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="кактус">
-          </p>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img src="/img/photo-cactus-mobile@1x.jpg" srcset="/img/photo-cactus-mobile@2x.jpg 2x" alt="кактус">
+            </picture>
+            </p>
           <figcaption class="photo-block__caption">
             <div class="photo-block__author author">
               <span class="author__title">Местная растительность</span>
@@ -107,8 +119,12 @@
         </figure>
         <figure class="gallery__item photo-block">
           <p class="photo-block__img">
-            <img src="/img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="серпантин">
-          </p>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img src="/img/photo-roads-mobile@1x.jpg" srcset="/img/photo-roads-mobile@2x.jpg 2x" alt="серпантин">
+            </picture>
+            </p>
           <figcaption class="photo-block__caption">
             <div class="photo-block__author author">
               <span class="author__title">Дорога на север</span>
@@ -136,8 +152,12 @@
         </figure>
         <figure class="gallery__item photo-block">
           <div class="photo-block__img">
-            <img src="/img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="дорога в Седону">
-          </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img src="/img/photo-bridge-mobile@1x.jpg" srcset="/img/photo-bridge-mobile@2x.jpg 2x" alt="дорога в Седону">
+            </picture>
+            </div>
           <figcaption class="photo-block__caption">
             <div class="photo-block__author author">
               <span class="author__title">Мост дьявола</span>

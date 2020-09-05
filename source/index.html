@@ -27,7 +27,11 @@
           </li>
           <li class="site-list__item site-list__item--logo">
             <a>
-              <img src="img/logotype-mobile.svg" width="102" height="84" alt="sedona logo">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="sedona logo">
+              </picture>
             </a>
           </li>
         </ul>
@@ -35,7 +39,7 @@
       </nav>
       <div class="page-header__banner banner banner--index">
         <div class="banner__text banner__text--index">
-          <img src="/img/text-sedona-index.svg" width="282" height="214" alt="welcome">
+          <img src="/img/text-sedona-index.svg" alt="welcome">
       </div>
     </header>
 
@@ -55,7 +59,11 @@
             </p>
           </div>
           <div class="reason__img">
-            <img src="/img/main-city-mobile@1x.jpg" width="320" height="260" alt="Sedona square">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img src="img/main-city-mobile@1x.jpg" srcset="/img/main-city-mobile@2x.jpg 2x" alt="Sedona square">
+            </picture>
           </div>
         </div>
         <ul class="reasons__hints hint">
@@ -87,8 +95,12 @@
             </p>
           </div>
           <div class="reason__img">
-            <img src="/img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Devil's bridge">
-          </div>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img src="/img/main-bridge-mobile@1x.jpg" srcset="/img/main-bridge-mobile@2x.jpg 2x" alt="Devil's bridge">
+            </picture>
+            </div>
         </div>
         <div class="reasons__item reason">
           <div class="reason__text">
