@@ -191,7 +191,11 @@
         </p>
         <div class="promo__video video">
           <div class="video__poster">
-            <img src="/img/video-mobile@1x.jpg" width="320" height="201" alt="video poster">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="/img/video-mobile@1x.jpg" srcset="/img/video-mobile@2x.jpg 2x" alt="video poster">
+            </picture>
           </div>
           <div class="video__controls">
             <div class="video__progressbar progressbar">
