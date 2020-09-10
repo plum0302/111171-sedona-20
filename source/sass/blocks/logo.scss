@@ -1,8 +1,19 @@
 .logo {
-  width: 101px;
-  height: 84px;
+  height: 102px;
 }
 
-.logo svg use .logo__border {
+.logo__border {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.logo__clouds {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
