@@ -4,13 +4,13 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const csso = require("csso");
-const rename = require("rename");
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
 const sync = require("browser-sync").create();
 const del = require("del");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("svg-store");
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -23,7 +23,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename(styles.min.css))
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -78,7 +78,7 @@ const webp = () => {
 exports.webp = webp;
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("source/img/**/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -106,13 +106,30 @@ const clean = () => {
 
 exports.clean = clean;
 
+const html = () => {
+  return gulp.src("source/*.html",{base:"source"})
+    .pipe(gulp.dest("build"));
+};
+
+exports.html = html;
+
 const build = () => gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
+  clean,
+  copy,
+  styles,
+  images,
+  webp,
+  sprite,
+  html
 );
 
 exports.build = build;
+
+const start = () => gulp.series(
+  build,
+  server,
+  watcher
+);
+
+exports.start = start;
 
