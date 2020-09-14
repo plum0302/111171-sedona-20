@@ -51,7 +51,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html").on("change", gulp.series(html, sync.reload));
 }
 
 exports.default = gulp.series(
@@ -62,26 +62,24 @@ const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
 };
 
 exports.images = images;
 
-const webp = () => {
+const imgwebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 };
 
-exports.webp = webp;
+exports.imgwebp = imgwebp;
 
 const sprite = () => {
   return gulp.src("source/img/**/*.svg")
     .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
 };
 
 exports.sprite = sprite;
@@ -113,19 +111,19 @@ const html = () => {
 
 exports.html = html;
 
-const build = () => gulp.series(
+const build = gulp.series(
   clean,
   copy,
   styles,
   images,
-  webp,
+  imgwebp,
   sprite,
   html
 );
 
 exports.build = build;
 
-const start = () => gulp.series(
+const start = gulp.series(
   build,
   server,
   watcher
