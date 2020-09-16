@@ -1,6 +1,7 @@
 .social__list {
   display: flex;
-  justify-content: center;
+  width: 151px;
+  justify-content: space-between;
 
   @include list-styles-reset;
 }
@@ -8,7 +9,6 @@
 .social__item {
   width: 46px;
   background-color: $blue;
-  margin-right: 6px;
 }
 
 .social__link {

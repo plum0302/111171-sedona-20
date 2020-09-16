@@ -7,7 +7,6 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("/img/bg-back-mobile@2x.jpg");
-    background-size: 1338px auto;
   }
 
   @media (min-width: $tablet-width) {
@@ -15,7 +14,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/bg-back-tablet@2x.jpg");
-      background-size: 1338px auto;
     }
   }
 
@@ -24,7 +22,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/bg-back-desktop@2x.jpg");
-      background-size: 2400px auto;
     }
   }
 }
@@ -40,7 +37,7 @@
 .banner__text {
   text-align: center;
   padding-top: 52px;
-  padding-bottom: 67px;
+  padding-bottom: 62px;
 }
 
 .banner__text svg {
@@ -59,8 +56,8 @@
 }
 
 .banner__text--index {
-  padding-top: 90px;
-  padding-bottom: 85px;
+  padding-top: 91px;
+  padding-bottom: 78px;
 
   @media (min-width: $tablet-width) {
     padding-top: 77px;

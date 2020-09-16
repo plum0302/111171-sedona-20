@@ -1,6 +1,6 @@
 .reasons {
   position: relative;
-  padding-top: 20px;
+  padding-top: 18px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -15,7 +15,7 @@
 .reasons::before {
   content: "";
   position: absolute;
-  top: -1px;
+  top: -5px;
   width: 320px;
   height: 37px;
   background-image: url("/img/bg-triangle.svg");

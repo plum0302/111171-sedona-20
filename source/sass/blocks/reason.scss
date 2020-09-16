@@ -10,11 +10,33 @@
   }
 }
 
+.reason--town {
+  .reason__text {
+    padding-top: 33px;
+  }
+
+  .reason__description {
+    margin: 16px 12px 0 12px;
+    padding-bottom: 39px;
+  }
+}
+
+.reason--bridge {
+  .reason__text {
+    padding-top: 39px;
+  }
+
+  .reason__description {
+    margin: 16px 12px 0 12px;
+    padding-bottom: 35px;
+  }
+}
+
 .reason__text {
-  padding-top: 26px;
   text-align: center;
   background-color: $grey;
   box-sizing: border-box;
+  padding-top: 26px;
 
   @media (min-width: $tablet-width) {
     width: 256px;
@@ -30,11 +52,14 @@
 .reason__text--colored {
   background-color: $blue;
   color: $white;
-  padding-top: 39px;
-  padding-bottom: 43px;
 
   .reason__description {
     border: none;
+  }
+
+  .reason__number::before,
+  .reason__number::after {
+    background-color: $white;
   }
 
   @media (min-width: $tablet-width) {
@@ -62,9 +87,31 @@
   }
 }
 
+.reason__number {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 8px;
+    top: 50%;
+    background-color: $dark;
+  }
+
+  &::before {
+    left: -13px;
+  }
+
+  &::after {
+    right: -13px;
+  }
+}
+
 .reason__description {
-  margin: 16px 20px 0 20px;
-  padding: 0 12px 24px 12px;
+  margin: 16px 32px 0 32px;
+  padding-bottom: 24px;
   border-bottom: 1px solid $dark-grey;
 
   @media (min-width: $tablet-width) {
