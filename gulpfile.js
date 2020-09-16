@@ -116,13 +116,14 @@ const html = () => {
 
 exports.html = html;
 
-const js = ('compress', function () {
+const js = () => {
   return pipeline(
-    gulp.src("source/js/**/*.js", {base:"source"}),
+    gulp.src("source/js/**/*.js"),
     uglify(),
+    rename("script.min.js"),
     gulp.dest("build/js")
   );
-});
+};
 
 exports.js = js;
 
