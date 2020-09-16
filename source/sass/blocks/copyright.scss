@@ -2,8 +2,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 47px;
+  }
 }
 
 .copyright__text {
   line-height: 26px;
+}
+
+.copyright__link {
+  margin-left: 13px;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      fill: $menu-hover;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($black, 0.3);
+    }
+  }
 }

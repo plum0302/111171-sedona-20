@@ -8,20 +8,42 @@
   cursor: pointer;
   user-select: none;
   padding-top: 13px;
-  padding-left: 74px;
+  padding-left: 78px;
   min-height: 48px;
   box-sizing: border-box;
 
   &::before {
     content: "";
     position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 0;
+    width: 50px;
+    height: 50px;
+    left: 3px;
     top: 0;
     border: 15px solid $form-grey;
     box-sizing: border-box;
     border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      top: -3px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      border-color: $gallery-grey;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: $radio-active;
+      background-color: rgba($dark, 0.3);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-left: 75px;
   }
 }
 

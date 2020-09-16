@@ -4,20 +4,40 @@
   justify-content: space-between;
 
   @include list-styles-reset;
-}
 
-.social__item {
-  width: 46px;
-  background-color: $blue;
+  @media (min-width: $tablet-width) {
+    padding-right: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-left: 41px;
+  }
 }
 
 .social__link {
   display: block;
+  width: 46px;
+  height: 48px;
   padding-top: 15px;
   padding-bottom: 7px;
   text-align: center;
+  background-color: $blue;
+  box-sizing: border-box;
 
   svg {
     fill: $white;
+  }
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+
+    svg {
+      opacity: 0.3;
+    }
   }
 }

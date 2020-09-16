@@ -14,11 +14,16 @@
   margin-right: 15px;
 
   svg {
+    fill: $black;
     opacity: 0.3;
 
     @media (min-width: $desktop-width) {
       opacity: 1;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 11px;
   }
 
   @media (min-width: $desktop-width) {

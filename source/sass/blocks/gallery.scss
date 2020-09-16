@@ -6,11 +6,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: none;
-    padding: 0 60px;
+    padding: 48px 60px 0;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 45px 0 0;
   }
 }
 
@@ -19,11 +20,5 @@
 
   @media (min-width: $tablet-width) {
     border: none;
-  }
-}
-
-.gallery__item:first-child {
-  @media (min-width: $tablet-width) {
-    grid-column: 1/-1;
   }
 }

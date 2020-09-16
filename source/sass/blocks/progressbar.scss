@@ -15,15 +15,16 @@
 }
 
 .progressbar__toggle {
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   background-color: $white;
   border-radius: 50%;
   position: absolute;
-  top: 17px;
-  left: 66px;
+  top: 20px;
+  left: 58px;
 
   @media (min-width: $tablet-width) {
-    top: -5px;
+    top: -3px;
+    left: 113px;
   }
 }

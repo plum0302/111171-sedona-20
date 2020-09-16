@@ -12,7 +12,21 @@
   display: block;
   margin: 0 auto;
 
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+    color: rgba($white, 0.7);
+  }
+
   @media (min-width: $tablet-width) {
     width: 458px;
   }
+}
+
+.button--form {
+  padding-top: 20px;
+  padding-bottom: 13px;
 }

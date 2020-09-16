@@ -1,6 +1,6 @@
 .photo-block {
-  padding-top: 12px;
-  padding-bottom: 15px;
+  padding-top: 23px;
+  padding-bottom: 17px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -14,9 +14,21 @@
   }
 }
 
+.photo-block--big {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  .photo-block__caption {
+    @media (min-width: $tablet-width) {
+      padding-top: 14px;
+    }
+  }
+}
+
 .photo-block__img {
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 
   img {
     display: block;
@@ -37,8 +49,8 @@
     background-color: $form-grey;
     display: flex;
     justify-content: space-between;
-    padding-top: 22px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 17px;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,10 +77,10 @@
 }
 
 .photo-block__likes {
-  margin-top: 12px;
+  margin-top: 13px;
 
   @media (min-width: $tablet-width) {
-    padding-right: 20px;
+    width: 85px;
     margin-top: 0;
   }
 }

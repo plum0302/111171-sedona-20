@@ -1,4 +1,5 @@
 .fieldset {
+  margin: 0;
   border-bottom: 1px solid $gallery-grey;
   padding: 0 20px;
   box-sizing: border-box;
@@ -15,45 +16,79 @@
   font-weight: bold;
   padding-top: 20px;
   text-align: center;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    width: 309px;
-  }
-}
-
-.fieldset--impression .fieldset__item {
-  margin-bottom: 21px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
-  }
-}
-
-.fieldset--introduction .fieldset__item {
-  margin-bottom: 20px;
-}
-
-.fieldset--contacts .fieldset__item {
-  margin-bottom: 14px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
-  }
-}
-
-.fieldset--attractions .fieldset__item {
-  margin-bottom: 34px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
   }
 }
 
 .fieldset--impression {
+  padding-bottom: 11px;
+
+  .fieldset__title{
+    padding-bottom: 24px;
+  }
+
+  .fieldset__item {
+    margin-bottom: 21px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     order: -1;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 292px;
+      top: 24px;
+      right: 0;
+      background-color: $title-grey;
+      position: absolute;
+    }
+  }
+}
+
+.fieldset--introduction {
+  padding-bottom: 5px;
+
+  .fieldset__item {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      width: 266px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 57px;
+  }
+}
+
+.fieldset--contacts {
+  padding-bottom: 15px;
+
+  .fieldset__item {
+    margin-bottom: 12px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.fieldset--attractions {
+  .fieldset__item {
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -75,7 +110,7 @@
 
 .fieldset--attractions > .fieldset__wrapper {
   @media (min-width: $tablet-width) {
-    width: 473px;
+    width: 457px;
     margin: 0 auto;
     justify-content: space-between;
   }
@@ -85,23 +120,18 @@
   }
 }
 
-.fieldset__title--attractions {
-  @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
-  }
-}
-
 .fieldset--text {
   border-bottom: none;
 }
 
-.fieldset__title--text {
-  @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
-  }
-}
-
 .fieldset__title--contacts {
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 33px;
+    padding-bottom: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 71px;
   }
@@ -112,25 +142,24 @@
 .fieldset__title--text {
   @media (min-width: $tablet-width) {
     position: relative;
+    margin: 0 auto;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 123px;
-      height: 1px;
-      background-color: $title-grey;
-      top: 50%;
-      left: -164px;
-    }
-
+    &::before,
     &::after {
       content: "";
       position: absolute;
       width: 123px;
       height: 1px;
       background-color: $title-grey;
-      top: 50%;
-      right: -164px;
+      top: 43px;
+    }
+
+    &::before {
+      right: 343px;
+    }
+
+    &::after {
+      left: 343px;
     }
   }
 
@@ -147,11 +176,50 @@
   }
 }
 
+.fieldset__title--attractions {
+  padding-top: 14px;
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+    width: 300px;
+    padding-top: 10px;
+
+    &::before {
+      top: 36px;
+      right: 353px;
+    }
+
+    &::after {
+      top: 36px;
+      left: 353px;
+    }
+  }
+}
+
+.fieldset__title--text {
+  padding-top: 21px;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 39px;
+    padding-top: 34px;
+
+    &::before {
+      right: 325px;
+    }
+
+    &::after {
+      left: 325px;
+    }
+  }
+}
+
 .fieldset__title--introduction,
 .fieldset__title--impression {
   @media (min-width: $tablet-width) {
     text-align: start;
-    margin-bottom: 60px;
+    margin-bottom: 37px;
   }
 }
 

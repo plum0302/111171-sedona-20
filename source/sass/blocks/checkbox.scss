@@ -1,34 +1,54 @@
 .checkbox {
   flex-basis: 215px;
 
-  label {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    text-transform: none;
-    display: block;
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-    padding-top: 13px;
-    padding-left: 74px;
-    min-height: 48px;
-    box-sizing: border-box;
+  @media (min-width: $tablet-width) {
+    flex-basis: 201px;
   }
-}
-
-.checkbox label::before {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  left: 0;
-  top: 0;
-  background-color: $form-grey;
-  box-sizing: border-box;
-  border-radius: 3px;
 }
 
 .checkbox input:checked + label::before {
   background: $form-grey url("/img/icon-tick.svg") center no-repeat;
+}
+
+.checkbox label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 15px;
+  padding-left: 79px;
+  min-height: 48px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    left: 0;
+    top: 0;
+    background-color: $form-grey;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+
+  &:hover {
+    &::before {
+      background-color: $gallery-grey;
+    }
+  }
+
+  &:active {
+    &::before {
+      background: $radio-active;
+
+      .checkbox input:checked + label::before {
+        opacity: 0.3;
+      }
+    }
+  }
 }

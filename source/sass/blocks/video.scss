@@ -59,15 +59,40 @@
   border: none;
   background-color: transparent;
   padding: 0;
-}
+  cursor: pointer;
 
-.video__fullscreen polygon,
-.video__restart svg,
-.video__subtitles path {
-  fill: $video-grey;
+  svg {
+    fill: $video-grey;
+
+    @media (min-width: $tablet-width) {
+      fill: $white;
+    }
+  }
+
+  &:hover {
+    svg {
+      fill: $dark;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba($dark, 0.3);
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    fill: $white;
+    &:hover {
+      svg {
+        fill: rgba($white, 0.6);
+      }
+    }
+
+    &:active {
+      svg {
+        fill: rgba($white, 0.3);
+      }
+    }
   }
 }
 

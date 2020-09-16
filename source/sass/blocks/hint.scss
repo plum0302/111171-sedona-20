@@ -18,11 +18,12 @@
     width: 33%;
     padding-top: 159px;
     padding-left: 0;
-    margin-bottom: 43px;
+    margin-bottom: 45px;
+    flex-grow: 1;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 64px;
+    margin-bottom: 66px;
   }
 }
 
@@ -53,7 +54,7 @@
     background-position: center 61px;
 
     .hint__description {
-      padding: 0 30px;
+      padding: 0 32px;
       margin-top: 23px;
     }
   }
