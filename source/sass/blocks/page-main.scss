@@ -16,11 +16,17 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 30px;
+      font-size: 21px;
+      max-width: 520px;
     }
   }
 
   .page-main__caption {
     margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 520px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -73,13 +79,6 @@
   }
 }
 
-.page-main--index .page-main__title {
-  @media (min-width: $tablet-width) {
-    font-size: 21px;
-    max-width: 520px;
-  }
-}
-
 .page-main__caption {
   line-height: 26px;
   color: $dark;
@@ -91,11 +90,5 @@
   @media (min-width: $tablet-width) {
     max-width: 440px;
     margin-bottom: 32px;
-  }
-}
-
-.page-main--index .page-main__caption {
-  @media (min-width: $tablet-width) {
-    max-width: 520px;
   }
 }
